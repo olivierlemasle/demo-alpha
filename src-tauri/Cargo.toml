@@ -13,7 +13,8 @@ edition = "2021"
 strip = true
 
 [build-dependencies]
-tauri-build = { version = "2.0.0-alpha", features = [] }
+tauri-build = { git = "https://github.com/tauri-apps/tauri", branch = "dev", features = [
+] }
 
 [dependencies]
 tauri = { version = "2.0.0-alpha", features = [] }
@@ -25,3 +26,6 @@ serde_json = "1.0"
 # this feature is used for production builds or when `devPath` points to the filesystem
 # DO NOT REMOVE!!
 custom-protocol = ["tauri/custom-protocol"]
+
+[patch.crates-io]
+tauri = { git = "https://github.com/tauri-apps/tauri", branch = "dev" }
